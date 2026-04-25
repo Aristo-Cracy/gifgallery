@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GIF Library</title>
+
+<link rel="stylesheet" href="styles.css" />
+<link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="container">
+  <h1>GIF Library</h1>
+
+  <div class="controls">
+    <input type="text" id="search" placeholder="Search..." />
+    <select id="sort">
+      <option value="default">Default</option>
+      <option value="az">Name A-Z</option>
+      <option value="za">Name Z-A</option>
+      <option value="newest">Newest</option>
+      <option value="oldest">Oldest</option>
+    </select>
+  </div>
+
+  <div id="content"></div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="terminal-window">
+    <div class="title-bar">
+      <div class="buttons">
+        <span class="red"></span>
+        <span class="yellow"></span>
+        <span class="green"></span>
+      </div>
+      <div class="title">code.h</div>
+      <div class="close-btn" onclick="closeModal()">✕</div>
+    </div>
+
+    <div class="terminal-body">
+      <pre><code id="codeContent" class="language-cpp"></code></pre>
+    </div>
+
+    <!-- <button onclick="copyCode()">Copy Code</button> -->
+    <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-cpp.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
